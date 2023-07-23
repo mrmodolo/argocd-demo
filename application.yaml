@@ -11,12 +11,12 @@ spec:
 
   # Source of the application manifests
   source:
-    repoURL: https://github.com/Sarvabhowma1995/argocd-demo.git # Can point to either a Helm chart repo or a git repo.
+    repoURL: https://github.com/mrmodolo/argocd-demo.git # Can point to either a Helm chart repo or a git repo.
     targetRevision: HEAD # For Helm, this refers to the chart version.
     path: develop # This has no meaning for Helm charts pulled directly from a Helm repo instead of git.
   # Destination cluster and namespace to deploy the application
   destination:
-    server: https://kubernetes.default.svc # to which cluster we need to connect. Here you can mention external url for external kubernetes clusters.
+    server: https://argocd-server.argocd # to which cluster we need to connect. Here you can mention external url for external kubernetes clusters.
     namespace: demo-app # which name space it should sync with
 
   # Sync policy
